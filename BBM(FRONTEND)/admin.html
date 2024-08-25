@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html" class="nav-button">Donor Request Form</a></li>
+            <li><a href="login.html" class="nav-button">Admin Login</a></li>
+            <li><a href="resources.html" class="nav-button">Resources</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content-section glass-effect" id="adminPage">
+            <h1>Admin Page</h1>
+            <div id="requests"></div>
+
+            <!-- Blood Units Form -->
+            <div id="bloodUnitsForm">
+                <h2>Update Blood Units</h2>
+                <label for="bloodGroupSelect">Blood Group:</label>
+                <select id="bloodGroupSelect">
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+                <label for="changeUnits">Units:</label>
+                <input type="number" id="changeUnits" value="0">
+                <button 
+                id="Add"
+                onclick="addUnits()">Add</button>
+                <button onclick="removeUnits()">Remove</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
